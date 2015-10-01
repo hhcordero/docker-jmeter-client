@@ -1,6 +1,8 @@
 # JMeter Client (Non-gui)
 
-Docker image for JMeter (non-gui client) running on Ubuntu. Make sure to open port 1099.
+[![](https://badge.imagelayers.io/hhcordero/docker-jmeter-server:latest.svg)](https://imagelayers.io/?images=hhcordero/docker-jmeter-client:latest 'Get your own badge on imagelayers.io')
+
+Docker image for JMeter (non-gui client) running Minimal Alpine Linux or Ubuntu. Make sure to open port 1099.
 
 ## Environment variables
 
@@ -28,3 +30,11 @@ $   docker run \
 ```
 
 Result will be saved as /load_tests/$TEST_DIR/$TEST_PLAN.jtl file. Download the result using scp.
+
+### Helper script
+
+[Dockerized JMeter - A Distributed Load Testing Workflow](https://gist.github.com/hhcordero/abd1dcaf6654cfe51d0b)
+
+This is a shell script that make use of [Docker Machine](https://github.com/docker/machine) to provision VM. Currently supported clouds are:
+- Amazon
+- DigitalOcean
